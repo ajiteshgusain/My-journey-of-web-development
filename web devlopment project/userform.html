@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic User Form</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4; /* Very light gray background */
+        }
+
+        /* Center the form container */
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc; /* Simple border */
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        /* Style for groups of input/label */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Make labels block elements for a clean stack */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Style for text inputs and textarea */
+        input[type="text"], 
+        input[type="email"], 
+        textarea {
+            width: 95%; /* 95% width inside the container */
+            padding: 8px;
+            border: 1px solid #999;
+            box-sizing: border-box; /* Includes padding/border in the width */
+        }
+
+        textarea {
+            resize: vertical; /* Only allow vertical resizing */
+        }
+
+        /* Style for the submit button */
+        button {
+            background-color: #4CAF50; /* A basic green color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="user_email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="user_message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>

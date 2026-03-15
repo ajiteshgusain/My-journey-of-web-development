@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------- */
+/* Focus: Font Properties (font-family, font-size, line-height) */
+/* ------------------------------------------------------------- */
+
+/* Rule 1: Set page-wide text defaults */
+body {
+    /* Set a clean, readable font for the entire page */
+    font-family: Georgia, serif; 
+    /* Slightly increase the base font size */
+    font-size: 1.1em; 
+    /* Crucial for reading comfort */
+    line-height: 1.6; 
+    /* Remove default body margin */
+    margin: 0; 
+    padding: 20px; /* Add some overall page padding so text isn't stuck to the edge */
+}
+
+/* Rule 2: Style Headings for emphasis */
+h1 {
+    /* Make the title stand out */
+    font-family: Arial, sans-serif; 
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Rule 3: Space out paragraphs */
+p {
+    /* Add vertical space between paragraphs */
+    margin-bottom: 1.2em;
+}

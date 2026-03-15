@@ -1,0 +1,144 @@
+/* --- Global Styles & Reset --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the content area */
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #2c3e50; /* Dark Blue/Gray */
+    color: white;
+    padding: 20px 0;
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+}
+
+nav {
+    float: right;
+    padding-top: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Bright Blue on hover */
+}
+
+/* --- Main Content Sections (Cards) --- */
+main {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- Skills List Styling --- */
+.skills-list {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+}
+
+/* --- Form Styling --- */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    justify-self: start;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: #2c3e50;
+    color: #bdc3c7; /* Light gray text */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+/* Clearfix for float in header */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}

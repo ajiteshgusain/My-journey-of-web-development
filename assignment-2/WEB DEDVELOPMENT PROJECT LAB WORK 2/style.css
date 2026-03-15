@@ -1,0 +1,310 @@
+/* ---------------------------------------------------- */
+/* 1. Global Reset, Color Theme & Typography */
+/* ---------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Updated Color Theme to match the deep blue/white palette */
+:root {
+    --primary-color: #0056b3; /* Deep Blue from the image */
+    --secondary-color: #3876c1; /* Slightly lighter blue */
+    --text-color: #333;
+    --background-color: #f4f4f4; /* Light gray page background */
+    --white-color: #ffffff;
+    --border-color: #ddd;
+    --accent-color: #ff4500; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content area (Matches the white container in the image) */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0; /* Remove padding here to allow sections to control spacing */
+    background-color: var(--white-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------------------------------------------- */
+/* 2. Header & Navigation Styling */
+/* ---------------------------------------------------- */
+
+#main-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px; /* Title size adjusted for a portfolio feel */
+}
+
+#main-header h1 {
+    color: var(--white-color);
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav {
+    background-color: var(--primary-color);
+    padding: 5px 0;
+    /* Sticky Positioning */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex; /* Center the links */
+    gap: 20px;
+}
+
+/* Navigation <a> links styling to match the image */
+#main-nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    display: block; 
+}
+
+#main-nav ul li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+/* ---------------------------------------------------- */
+/* 3. Section Styling & Dividers (Visual Match) */
+/* ---------------------------------------------------- */
+
+.content-section {
+    padding: 30px 50px; /* Padding inside the white container sections */
+    text-align: center;
+}
+
+/* Title bar style for sections (like "About Me" and "My Skills" in the image) */
+.section-title, .section-subtitle {
+    display: inline-block;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 5px 15px;
+    /* Simulate the boxed title appearance */
+    border-bottom: 3px solid var(--primary-color); 
+    text-align: center;
+}
+
+/* Large gray horizontal dividers (Visual Separators) */
+.section-divider {
+    height: 10px;
+    background-color: var(--background-color);
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* About Section */
+.profile-img {
+    /* Adjusted styling to be a general placeholder image like the image shows */
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background-color: #e0f7fa; /* Light background for avatar placeholder */
+    border: 5px solid #b3e5fc; /* Blue border around the avatar */
+    box-shadow: none; /* Removed heavy shadow */
+}
+
+.bio-content {
+    display: block; /* Stack image and text vertically */
+}
+
+.bio-quote {
+    font-style: normal;
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+}
+
+.intro-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+/* ---------------------------------------------------- */
+/* 4. Skills Table Styling (Visual Match) */
+/* ---------------------------------------------------- */
+
+.skills-table {
+    border-collapse: collapse;
+    width: 50%; /* Make the table smaller/centered */
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: none;
+}
+
+.skills-table th, 
+.skills-table td {
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.skills-table tbody tr:nth-child(even),
+.skills-table tbody tr:hover {
+    background-color: var(--white-color); /* Keep rows white for a cleaner look */
+}
+
+
+/* ---------------------------------------------------- */
+/* 5. Projects Section Styling (Visual Match) */
+/* ---------------------------------------------------- */
+
+.project-list {
+    list-style: none; /* Remove list style */
+    padding: 0;
+}
+
+.project-list ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.project-card {
+    list-style: none;
+    margin: 20px auto;
+    padding: 15px;
+    width: 70%;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: var(--white-color);
+    text-align: center;
+}
+
+.project-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.project-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 0;
+}
+
+
+/* ---------------------------------------------------- */
+/* 6. Contact Form Styling (Table Layout Match) */
+/* ---------------------------------------------------- */
+
+.contact-table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid var(--primary-color);
+}
+
+.contact-table td {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+.contact-table label {
+    font-weight: bold;
+    display: block; /* Ensure label takes up space */
+    text-align: left;
+}
+
+.contact-table input[type="text"], 
+.contact-table input[type="email"], 
+.contact-table textarea {
+    width: 95%; /* Adjust width slightly for padding inside table */
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.form-submit-cell {
+    text-align: center;
+    padding-top: 15px !important;
+    border: none !important; /* Remove border around the submit cell */
+}
+
+/* Button Styling */
+.submit-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 8px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.submit-button:hover {
+    background-color: #004494;
+    transform: none;
+    box-shadow: none;
+}
+
+/* The extra form controls are kept below the table for completeness */
+.contact-notes {
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ---------------------------------------------------- */
+/* 7. Footer and Fixed Button (Visual Match) */
+/* ---------------------------------------------------- */
+
+.site-footer {
+    background-color: var(--primary-color);
+    text-align: right;
+    padding: 5px 0;
+    margin-top: 0;
+}
+
+/* "Back to Top" button is fixed to the bottom right of the viewport */
+.back-to-top-btn {
+    background-color: var(--primary-color); /* Same as footer background */
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 0; /* Make it block-like */
+    
+    /* Fixed Positioning */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.back-to-top-btn:hover {
+    background-color: #004494;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LAB3 WORK3 SURVEY FORM</title>
+</head>
+
+<body bgcolor="green">
+    <text face="arial">
+    <b><h1>SURVEY</h1></b>
+    <hr color="red" nonshade  size="10" align="left" width="20%" >
+    
+
+
+    <form action="/survey" method="post">
+        <label>What are your favorite programming languages?</label><br>
+        <input type="checkbox" id="python" name="language" value="python">
+        
+        <label for="python">PYTHON</label><br>
+        <input type="checkbox" id="javascript" name="language" value="javascript">
+        
+        <label for="javascript">JAVASCRIPT</label><br>
+        <input type="checkbox" id="java" name="language" value="java">
+        
+        <label for="java">JAVA</label><br>
+        
+        <input type="checkbox" id="cpp" name="language" value="cpp">
+        <label for="cpp">C++</label><br><br>
+
+        <label>How many years of experience do you have?</label><br>
+        
+        <select name="experience">
+            
+            <option value="less-than-1">Less than 1 year</option>
+            
+            <option value="1-3">1-3 years</option>
+            
+            <option value="3-5">3-5 years</option>
+            
+            <option value="more-than-5">More than 5 years</option>
+        
+        </select><br><br>
+        
+        <button type="submit">Submit Survey</button>
+    
+    </form>
+</body>
+</html>

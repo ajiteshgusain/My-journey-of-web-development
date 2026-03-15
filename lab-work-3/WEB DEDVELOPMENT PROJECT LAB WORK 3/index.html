@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajitesh Singh Gusain - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header id="main-header">
+        <h1><u>AJITESH</u>&nbsp<u> SINGH</u>&nbsp<u> GUSAIN</u></h1>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#Bio">About</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Contacts">Contacts</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        
+        <section id="Bio" class="content-section">
+            <h1 class="section-title"><u>Welcome To My Portfolio</u></h1>
+            
+            <div id="hero-section">
+                <p class="intro-text">Hi, I am a student of **Web Development**.<br>
+                <strong>"I bridge the gap between beautiful design and flawless functionality."</strong></p>
+            </div>
+            
+            <h1 class="section-title"><u>About Me</u></h1>
+
+            <div class="bio-content">
+                <img src="myphoto.jpg" alt="Ajitesh Singh Gusain's Photo" title="Ajitesh Singh Gusain" class="profile-img">
+                <p class="bio-quote">
+                    **"The web is a giant, beautiful tapestry, and I find joy in weaving every thread, from the semantic HTML structure to the last responsive breakpoint."**
+                </p>
+            </div>
+            <div class="section-divider"></div>
+        </section>
+        
+        <section id="Skills" class="content-section">
+            <h1 class="section-title"><b><u>Technical Skills</u></b></h1>
+            <table class="skills-table">
+                <caption>Skills Overview</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2">Skill Focus</th> </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr class="alternate-row">
+                        <td>CSS</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Learning</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section-divider"></div>
+        </section>
+
+
+        <section id="Projects" class="content-section">
+            <h1 class="section-title"><u>My projects</u></h1>
+
+            <dl class="project-list">
+                <ol type="i">
+                    <li class="project-card">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">
+                            I built a basic Portfolio website with a contact form.
+                            <a href="portfolio.html" target="_blank" class="project-link">View Project 1</a>
+                        </p>
+                    </li>
+                    
+                    <li class="project-card">
+                        <h3 class="project-title">Medium Clone</h3>
+                        <p class="project-description">
+                            I built this using basic HTML and CSS to practice clean, readable blog layouts.
+                            <a href="mediumclone.html" target="_blank" class="project-link">View Project 2</a>
+                        </p>
+                    </li>
+                    
+                    <li class="project-card">
+                        <h3 class="project-title">User Form</h3>
+                        <p class="project-description">
+                            I built this using basic HTML and the form tag, focusing on various input types. 
+                            <a href="userform.html" target="_blank" class="project-link">View Project 3</a>
+                        </p>
+                    </li>
+                </ol>
+            </dl>
+            <div class="section-divider"></div>
+        </section>
+
+        
+        <section id="Contacts" class="content-section">
+            <h3 class="section-subtitle">Registration Form (5 Input Types)</h3>
+            
+            <form action="#" method="POST" class="contact-form">
+                <table class="contact-table">
+                    <tr>
+                        <td><label for="reg_name">Name:</label></td>
+                        <td><input type="text" id="reg_name" name="name" placeholder="Enter your name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="reg_email">Email:</label></td>
+                        <td><input type="email" id="reg_email" name="email" placeholder="Enter your email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="reg_message">Message:</label></td>
+                        <td><textarea id="reg_message" name="message" rows="4" placeholder="Enter your message"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="form-submit-cell">
+                             <button type="submit" class="submit-button">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <p class="contact-notes">
+                <div class="form-group contact-method">
+                    <label>Preferred Contact Method (Radio Button):</label>
+                    <input type="radio" id="contact_email" name="contact" value="email" checked> 
+                    <label for="contact_email" class="inline-label">Email</label>
+                    <input type="radio" id="contact_phone" name="contact" value="phone"> 
+                    <label for="contact_phone" class="inline-label">Phone</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="terms" name="terms" required> 
+                    <label for="terms" class="inline-label">I agree to the terms and conditions.</label>
+                </div>
+            </p>
+        </section>
+
+    </main>
+    
+    <footer class="site-footer">
+        <a href="#main-header" class="back-to-top-btn">↑ Back to Top</a>
+    </footer>
+ 
+</body>
+</html>

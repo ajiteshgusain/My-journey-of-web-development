@@ -1,0 +1,270 @@
+/* ---------------------------------------------------- */
+/* 1. Global Reset, Color Theme & Typography */
+/* ---------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Updated Color Theme to match the deep blue/white palette */
+:root {
+    /* Switched to rem for scalable text spacing */
+    --base-padding: 1.5rem; 
+    --primary-color: #0056b3; 
+    --secondary-color: #3876c1; 
+    --text-color: #333;
+    --background-color: #f4f4f4; 
+    --white-color: #ffffff;
+    --border-color: #ddd;
+    --accent-color: #ff4500; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content area */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0; 
+    background-color: var(--white-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------------------------------------------- */
+/* 2. Header & Navigation Styling (Updated with Flexbox) */
+/* ---------------------------------------------------- */
+
+#main-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px; 
+}
+
+#main-header h1 {
+    color: var(--white-color);
+    font-size: 1.5rem; /* Using rem */
+    margin: 0;
+    padding: 0;
+}
+
+/* FLEXBOX FOR NAVIGATION BAR */
+#main-nav {
+    background-color: var(--primary-color);
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* FLEXBOX APPLIED HERE */
+    display: flex; 
+    justify-content: center; /* Center the links */
+    gap: 1.25rem; /* Using rem */
+}
+
+/* Navigation <a> links styling */
+#main-nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem; /* Using rem */
+    display: block; 
+    /* CSS TRANSITION for smooth hover effect */
+    transition: background-color 0.3s ease;
+}
+
+#main-nav ul li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+/* ---------------------------------------------------- */
+/* 3. Section Styling & Dividers (Visual Match) */
+/* ---------------------------------------------------- */
+
+.content-section {
+    padding: var(--base-padding) 50px; /* Using CSS variable */
+    text-align: center;
+}
+
+/* Title bar style for sections */
+.section-title, .section-subtitle {
+    display: inline-block;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 5px 15px;
+    border-bottom: 3px solid var(--primary-color); 
+    text-align: center;
+}
+
+/* Large gray horizontal dividers */
+.section-divider {
+    height: 10px;
+    background-color: var(--background-color);
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* About Section (Flexbox for internal layout) */
+.bio-content {
+    /* FLEXBOX for image and quote alignment */
+    display: flex;
+    flex-direction: column; /* Stack vertically by default (mobile-first) */
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background-color: #e0f7fa; 
+    border: 5px solid #b3e5fc; 
+    box-shadow: none; 
+}
+
+/* ---------------------------------------------------- */
+/* 4. Skills Section (CSS GRID) */
+/* ---------------------------------------------------- */
+
+.skills-table {
+    /* Removed traditional table styling for a modern grid layout look */
+    border-collapse: collapse;
+    width: 90%; 
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: none;
+    /* CSS GRID APPLIED HERE */
+    display: grid;
+    /* Default is one column for mobile */
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+}
+
+.skills-table thead, .skills-table tbody tr {
+    display: contents; /* Allows children to be grid items */
+}
+
+.skills-table th, 
+.skills-table td {
+    border: 1px solid var(--primary-color);
+    padding: 1rem; /* Using rem */
+    text-align: center;
+    background-color: var(--white-color); /* Add a background */
+}
+
+.skills-table th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-transform: uppercase;
+    /* Grid-specific: make the header span all columns on wider screens */
+    grid-column: 1 / -1; 
+}
+
+/* Style the skill/level cells as a pair */
+.skills-table tbody tr td:nth-child(odd) {
+    background-color: #e9eff6; /* Light blue background for the skill name */
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------- */
+/* 5. Animations */
+/* ---------------------------------------------------- */
+
+/* Define the keyframe animation */
+@keyframes attention-grabber {
+    0% { color: var(--accent-color); transform: scale(1.0); }
+    50% { color: var(--primary-color); transform: scale(1.05); }
+    100% { color: var(--accent-color); transform: scale(1.0); }
+}
+
+/* Apply animation to a key element in the hero section */
+.intro-text strong {
+    /* Use a color-changing animation */
+    animation: attention-grabber 2s infinite alternate;
+    display: inline-block; /* Required for transform */
+}
+
+
+/* ---------------------------------------------------- */
+/* 6. Contact Form Styling */
+/* ---------------------------------------------------- */
+
+/* No change to contact form table to match the student's initial design choice */
+
+/* Button Styling & TRANSITION */
+.submit-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 8px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+    /* Add a simple transition for hover effect */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #004494;
+    transform: translateY(-2px); /* Simple transform effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------------------------------------------- */
+/* 7. Responsive Design (Media Queries) */
+/* ---------------------------------------------------- */
+
+/* Desktop and Tablet Layout (min-width: 600px) */
+@media (min-width: 600px) {
+    
+    /* 1. Flexbox on About Section for side-by-side layout */
+    .bio-content {
+        flex-direction: row; /* Lay out image and quote side-by-side */
+        justify-content: center;
+    }
+    .profile-img {
+        margin: 0; /* Remove auto margin */
+    }
+
+    /* 2. CSS Grid on Skills Section: 2 columns */
+    .skills-table {
+        /* 2 columns for Skill and Level */
+        grid-template-columns: repeat(2, 1fr); 
+        width: 60%;
+    }
+    
+    .skills-table th {
+        /* Make the header span two columns */
+        grid-column: span 2; 
+    }
+    
+    /* 3. Projects Grid: 2 columns */
+    #Projects .project-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns for projects */
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        width: 100%; /* Take up the full width of the grid cell */
+    }
+}
